@@ -1,0 +1,48 @@
+<template>
+
+  <div class="slds-grid slds-wrap">
+  
+    <!-- CEP -->
+    <div class="slds-col slds-size_1-of-3 slds-p-around_xx-small">
+      <lightning-input required type="number" name="zipCode" onchange={handleChange} placeholder="Informe seu código postal" label="CEP" ></lightning-input>
+    </div>
+
+    <!-- ADDRESS -->
+    <div class="slds-col slds-size_2-of-3 slds-p-around_xx-small">
+      <lightning-input required type="text" name="address" onchange={handleChange} placeholder="Informe seu endereço" label="Endereço"></lightning-input>
+    </div>
+  
+    <!-- NUMBER -->
+    <div class="slds-col slds-size_1-of-3 slds-p-around_xx-small">
+      <lightning-input required type="number" name="number" onchange={handleChange} placeholder="Informe seu número" label="Número" ></lightning-input>
+    </div>
+
+    <div class="slds-col slds-size_2-of-3 slds-p-around_xx-small">
+      <lightning-input type="text" name="observation" onchange={handleChange} placeholder="Informe seu complemento" label="Complemento"></lightning-input>
+    </div>
+  
+    <div class="slds-col slds-size_1-of-3 slds-p-around_xx-small">
+      <lightning-combobox
+            name="state"
+            label="Estado"
+            value={state}
+            placeholder="Selecione seu estado"
+            options={states}
+            onchange={handleChange} ></lightning-combobox>
+    </div>
+
+    <div class="slds-col slds-size_2-of-3 slds-p-around_xx-small">
+      <div class="slds-form-element">
+        <label class="slds-form-element__label" for="text-input-id-6">
+          <abbr class="slds-required" title="required">* </abbr>
+          Cidade
+        </label>
+        <div class="slds-form-element__control">
+          <input type="text" id="input_city" placeholder="Cidade" required class="slds-input" />
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</template>
